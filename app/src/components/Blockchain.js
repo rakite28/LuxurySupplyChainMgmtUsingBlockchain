@@ -6,7 +6,8 @@ import SupplyChainJSON from "../contracts/SupplyChain.json"
 
 import { connect } from "react-redux"
 import * as blockchainConnectionActions from "../actions/blockchainConnection/blockchainConnectionActions"
-
+import './style.css'
+import './utilities.css'
 const Blockchain = (props) => {
 
     const emptyAddress = "0x0000000000000000000000000000000000000000"
@@ -337,13 +338,248 @@ const Blockchain = (props) => {
     }
 
     return (
+
+
+
+
+
+
         <div>
+            <div class="navbar">
+                <div class="container flex">
+                    <h1 class="logo">LORD OF LUXURY.</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            {/* <!-- <li><a href="docs.html">Docs</a></li> --> */}
+                            <li><a href="#lb">Our Partners</a></li>
+                            <li><a href="">Transaction History</a></li>
+                            <li><a href="">Logged In As</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <section class="showcase">
+                <div class="container grid">
+                    <div class="showcase-text">
+                        <h1>Exclusive. Authentic. Secure.</h1>
+                        <p>One Stop Destination to seize <b>Counterfeit Luxury goods</b>, <b>Fradulent Transactions</b> &
+                            maintain <b>transparency</b>. A secure supply chain management system.</p>
+                        <a href="features.html" class="btn btn-outline">Read More</a>
+                    </div>
+                    <div class="showcase-form card">
+                        <h2>Register your company!</h2>
+                        <form>
+                            <div class="form-control">
+                                <input type="text" name="name" placeholder="Name" required />
+                            </div>
+                            <div class="form-control">
+                                <input type="text" name="company" placeholder="Company Name" required />
+                            </div>
+                            <div class="form-control">
+                                <input type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <input type="submit" value="Send" class="btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <section class="languages">
+                <h2 class="md text-center my-2">
+                    <b id="lb">Our Partners</b>
+                </h2>
+                <div class="container flex">
+                    <div class="card">
+                        <h4>Gucci</h4>
+                        <img src="gucci.png" height='80' width="10" alt="" />
+                    </div>
+                    <div class="card">
+                        <h4>Burberry</h4>
+                        <img src="images/burberry.jpg" height='80' width="10" alt="" />
+                    </div>
+                    <div class="card">
+                        <h4>Louis Vuitton</h4>
+                        <img src="images/lvlogo.png" height='80' width="10" alt="" />
+                    </div>
+                    <div class="card">
+                        <h4>Versace</h4>
+                        <img src="images/versace1.png" height='80' width="10" alt="" />
+                    </div>
+                    <div class="card">
+                        <h4>Gant</h4>
+                        <img src="images/Gant1.png" height='80' width="10" alt="" />
+                    </div>
+                    <div class="card">
+                        <h4>Givenchy</h4>
+                        <img src="images/givenchy.png" height='80' width="10" alt="" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="cloud bg-primary my-2 py-2">
+                <div class="container grid">
+                    <div class="text-center">
+                        <h2 class="lg">Modern technology.</h2>
+                        <p class="lead my-1">Smart Contracts. Provenance Tracking like you've never seen. Transparent, efficient
+                            and privacy
+                            maintained.</p>
+                        <a href="features.html" class="btn btn-dark">Read More</a>
+                    </div>
+                    <img src="images/cloud.png" alt="" />
+                </div>
+            </section>
+
+
+
+            <section class="cli">
+                <div class="container grid">
+                    <img src="images/cli.png" alt="" />
+                    <div class="card">
+                        <h3>Easy to use + verified security</h3>
+                    </div>
+                    <div class="card">
+                        <h3>Royalty points</h3>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="features-head bg-primary py-3">
+                <div class="container grid">
+                    <div>
+                        <h1 class="xl">Service Guaranteed</h1>
+                        <p class="lead">
+                            Check out the services provided by LORD OF LUXURY that separate us from the competition</p>
+                    </div>
+                    <img src="images/logos/server.png" alt="" />
+                </div>
+            </section>
+
+
+            <section class="features-sub-head bg-light py-3">
+                <div class="container grid">
+                    <div>
+                        <h1 class="md">The LORD OF LUXURY Platform</h1>
+                        <p>
+                            We provide realistic and efficient solutions like Provenance Tracking, Smart Contracts, Supply chain
+                            transparency and privacy.
+                        </p>
+                    </div>
+                    <img src="images/logos/server2.png" alt="" />
+                </div>
+            </section>
+
+            <section class="features-main my-2">
+                <div class="container grid grid-3">
+                    <div class="card flex">
+                        <i class="fas fa-server fa-3x"></i>
+                        <p>
+                            Provenance tracking: Blockchain is used to create a tamper-proof record of the journey of each
+                            luxury good</p>
+                    </div>
+                    <div class="card flex">
+                        <i class="fas fa-network-wired fa-3x"></i>
+                        <p>
+                            Smart Contracts: Blockchain is used to automate transactions and ensure that payments are made more
+                            securely and efficiently.
+                        </p>
+                    </div>
+                    <div class="card flex">
+                        <i class="fas fa-laptop-code fa-3x"></i>
+                        <p>
+                            Supply chain transparency: Blockchain is used to provide end-to-end transparency of the supply
+                            chain.
+                        </p>
+                    </div>
+                    <div class="card flex">
+                        <i class="fas fa-database fa-3x"></i>
+                        <p>
+                            Privacy: Blockchain can be use to ensure complete privacy.
+                        </p>
+                    </div>
+                    <div class="card flex">
+                        <i class="fas fa-power-off fa-3x"></i>
+                        <p>
+                            Plus Royalty Points: The businesses get added Royalty points each time they do business with us.
+                        </p>
+                    </div>
+                    <div class="card flex">
+                        <i class="fas fa-upload fa-3x"></i>
+                        <p>
+                            Simple:Businesses can easily register and get associated with our services.
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="stats">
+                <div class="container">
+                    <h3 class="stats-heading text-center my-1">
+                        Welcome to the best platform for safe and secure transactions.
+                    </h3>
+
+                    <div class="grid grid-3 text-center my-4">
+                        <div>
+                            <img src="images/handshake.jpeg" height="100" width="0.02"></img>
+                            <h3>10k+</h3>
+                            <p class="text-secondary">Satisfied businesses</p>
+                        </div>
+                        <div>
+                            <img src="images/truck.png"></img>
+                            {/* <i class="fas fa-upload fa-3x"></i> */}
+                            <h3>1Lakh+</h3>
+                            <p class="text-secondary">Goods supplied</p>
+                        </div>
+                        <div>
+                            <img src="images/bss.jpeg" height="200"></img>
+                            {/* <i class="fas fa-project-diagram fa-3x"></i> */}
+                            <h3>60K+</h3>
+                            <p class="text-secondary">Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer bg-dark py-5">
+                <div class="container grid grid-3">
+                    <div>
+                        <h1>LORD OF LUXURY.</h1>
+                        <p>Copyright &copy; 2023</p>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            {/* <li><a href="docs.html">Docs</a></li> */}
+                            <li><a href="#lb">Our Partners</a></li>
+                            <li><a href="">Transaction History</a></li>
+                            <li><a href="">Logged In As</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </footer>
+
             <div className="section">
                 <h1>Open Chain</h1>
                 <p>Selected account is {props.blockchain.account}</p>
                 <p>Selected account balance is {props.blockchain.balance} Eth
                 </p>
             </div>
+
 
             {/* Roles Management */}
             <div className="section">
