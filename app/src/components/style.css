@@ -3,7 +3,7 @@
 :root {
   --primary-color: #483434;
   --secondary-color: #1c3fa8;
-  --dark-color:#d7d1cc;
+  --dark-color:#252525;
   /* --dark-color: #002240; */
   --light-color: #eed6c4;
   --success--color: blue;
@@ -107,16 +107,18 @@ pre {
 }
 
 .showcase-form {
-  position: relative;
+   position: relative; 
   top: 60px;
-  height: 350px;
+  height: 440px;
   width: 400px;
   padding: 40px;
   z-index: 100;
+  
 }
 
 .showcase-form .form-control {
   margin: 30px 0;
+  /* height:100px; */
 }
 
 .showcase-form input[type='text'],
@@ -283,10 +285,15 @@ pre {
 .docs-main a:hover {
   font-weight: bold;
 }
+.footer{
+  margin-top: 45px;
+}
 
 /*footer*/
 .footer .social a {
   margin: 0 10px;
+  
+  
 }
 
 /*tablets and under*/
