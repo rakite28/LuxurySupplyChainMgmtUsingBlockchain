@@ -1,4 +1,20 @@
 import React, { useEffect, useState } from "react"
+import gucci from '../components/images/gucci.png'
+import burberry from '../components/images/burberry.jpg'
+import lvlogo from '../components/images/lvlogo.png'
+import versace1 from '../components/images/versace1.png'
+import givenchy from '../components/images/givenchy.png'
+import Gant1 from '../components/images/Gant1.png'
+import cc from '../components/images/cc.png'
+import lolo from '../components/images/lolo.png'
+import truck from '../components/images/truck.png'
+import bss from '../components/images/bss.jpeg'
+import bs from '../components/images/bs.jpg'
+import bc from '../components/images/bc.png'
+import sg1 from '../components/images/sg1.png'
+import lordof from '../components/images/lordof.png'
+
+
 
 import Web3 from 'web3'
 import TruffleContract from "truffle-contract"
@@ -338,24 +354,22 @@ const Blockchain = (props) => {
     }
 
     return (
-
-
-
-
-
-
         <div>
+            
             <div class="navbar">
-                <div class="container flex">
-                    <h1 class="logo">LORD OF LUXURY.</h1>
+                {/* <img src={lolo} alt='' id='lol' height='500px' width='5px'></img> */}
+                <div class="container flex"> 
+                
+                    <h1 class="logo" id='lol'>LORD OF LUXURY.</h1>
                     <nav>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="features.html">Features</a></li>
-                            {/* <!-- <li><a href="docs.html">Docs</a></li> --> */}
+                            <li><a href='#lol'>Home</a></li>
                             <li><a href="#lb">Our Partners</a></li>
-                            <li><a href="">Transaction History</a></li>
-                            <li><a href="">Logged In As</a></li>
+                            <li><a href="#sg">Features</a></li>
+                            {/* <!-- <li><a href="docs.html">Docs</a></li> --> */}
+                           
+                            <li><a href="#ts">Transaction History</a></li>
+                            <li><a href="">Log In</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -367,7 +381,7 @@ const Blockchain = (props) => {
                         <h1>Exclusive. Authentic. Secure.</h1>
                         <p>One Stop Destination to seize <b>Counterfeit Luxury goods</b>, <b>Fradulent Transactions</b> &
                             maintain <b>transparency</b>. A secure supply chain management system.</p>
-                        <a href="features.html" class="btn btn-outline">Read More</a>
+                        <a href="#sg" class="btn btn-outline ">Read More</a>
                     </div>
                     <div class="showcase-form card">
                         <h2>Register your company!</h2>
@@ -381,7 +395,7 @@ const Blockchain = (props) => {
                             <div class="form-control">
                                 <input type="email" name="email" placeholder="Email" required />
                             </div>
-                            <input type="submit" value="Send" class="btn btn-primary" />
+                            <button type="submit" value="Send" class="btn btn-primary" >Sign in</button>
                         </form>
                     </div>
                 </div>
@@ -399,81 +413,64 @@ const Blockchain = (props) => {
                 <div class="container flex">
                     <div class="card">
                         <h4>Gucci</h4>
-                        <img src="gucci.png" height='80' width="10" alt="" />
+                        <img src={gucci} height='80' width="10" alt="" />
                     </div>
                     <div class="card">
                         <h4>Burberry</h4>
-                        <img src="images/burberry.jpg" height='80' width="10" alt="" />
+                        <img src={burberry} height='80' width="10" alt="" />
                     </div>
                     <div class="card">
                         <h4>Louis Vuitton</h4>
-                        <img src="images/lvlogo.png" height='80' width="10" alt="" />
+                        <img src={lvlogo} height='80' width="10" alt="" />
                     </div>
                     <div class="card">
                         <h4>Versace</h4>
-                        <img src="images/versace1.png" height='80' width="10" alt="" />
+                        <img src={versace1} height='80' width="10" alt="" />
                     </div>
                     <div class="card">
                         <h4>Gant</h4>
-                        <img src="images/Gant1.png" height='80' width="10" alt="" />
+                        <img src={Gant1} height='80' width="10" alt="" />
                     </div>
                     <div class="card">
                         <h4>Givenchy</h4>
-                        <img src="images/givenchy.png" height='80' width="10" alt="" />
+                        <img src={givenchy} height='80' width="10" alt="" />
                     </div>
                 </div>
             </section>
 
-            <section class="cloud bg-primary my-2 py-2">
+            <section class="cloud my-2 py-2" style={{backgroundColor:"#625151", color:'white'}}>
                 <div class="container grid">
                     <div class="text-center">
                         <h2 class="lg">Modern technology.</h2>
                         <p class="lead my-1">Smart Contracts. Provenance Tracking like you've never seen. Transparent, efficient
                             and privacy
                             maintained.</p>
-                        <a href="features.html" class="btn btn-dark">Read More</a>
+                        <a href="#sg" class="btn btn-dark">Read More</a>
                     </div>
-                    <img src="images/cloud.png" alt="" />
+                    <img src={bc} alt="" />
                 </div>
             </section>
-
-
-
-            <section class="cli">
-                <div class="container grid">
-                    <img src="images/cli.png" alt="" />
-                    <div class="card">
-                        <h3>Easy to use + verified security</h3>
-                    </div>
-                    <div class="card">
-                        <h3>Royalty points</h3>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="features-head bg-primary py-3">
+            <section class="features-head bg-primary py-3"style={{backgroundColor: '#7c6e6e'}}>
                 <div class="container grid">
                     <div>
-                        <h1 class="xl">Service Guaranteed</h1>
+                        <h1 class="xl" id='sg'>Service Guaranteed</h1>
                         <p class="lead">
                             Check out the services provided by LORD OF LUXURY that separate us from the competition</p>
                     </div>
-                    <img src="images/logos/server.png" alt="" />
+                    <img src={sg1} alt="" />
                 </div>
             </section>
-
-
-            <section class="features-sub-head bg-light py-3">
+            <br/>
+            <section class="features-sub-head bg-light py-3"style={{backgroundColor: '#332525'}}>
                 <div class="container grid">
                     <div>
-                        <h1 class="md">The LORD OF LUXURY Platform</h1>
-                        <p>
+                        <h1 class="md" style={{color:'white'}}>The LORD OF LUXURY Platform</h1>
+                        <p style={{color:'white'}}>
                             We provide realistic and efficient solutions like Provenance Tracking, Smart Contracts, Supply chain
                             transparency and privacy.
                         </p>
                     </div>
-                    <img src="images/logos/server2.png" alt="" />
+                    <img src={lordof} alt="" />
                 </div>
             </section>
 
@@ -520,60 +517,13 @@ const Blockchain = (props) => {
                     </div>
                 </div>
             </section>
-            <section class="stats">
-                <div class="container">
-                    <h3 class="stats-heading text-center my-1">
-                        Welcome to the best platform for safe and secure transactions.
-                    </h3>
-
-                    <div class="grid grid-3 text-center my-4">
-                        <div>
-                            <img src="images/handshake.jpeg" height="100" width="0.02"></img>
-                            <h3>10k+</h3>
-                            <p class="text-secondary">Satisfied businesses</p>
-                        </div>
-                        <div>
-                            <img src="images/truck.png"></img>
-                            {/* <i class="fas fa-upload fa-3x"></i> */}
-                            <h3>1Lakh+</h3>
-                            <p class="text-secondary">Goods supplied</p>
-                        </div>
-                        <div>
-                            <img src="images/bss.jpeg" height="200"></img>
-                            {/* <i class="fas fa-project-diagram fa-3x"></i> */}
-                            <h3>60K+</h3>
-                            <p class="text-secondary">Customers</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="footer bg-dark py-5">
-                <div class="container grid grid-3">
-                    <div>
-                        <h1>LORD OF LUXURY.</h1>
-                        <p>Copyright &copy; 2023</p>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="features.html">Features</a></li>
-                            {/* <li><a href="docs.html">Docs</a></li> */}
-                            <li><a href="#lb">Our Partners</a></li>
-                            <li><a href="">Transaction History</a></li>
-                            <li><a href="">Logged In As</a></li>
-                        </ul>
-                    </nav>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-github fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                    </div>
-                </div>
-            </footer>
-
-            <div className="section">
+        
+            <div className="section" style={{backgroundColor:'#332525',
+        borderRadius : 25,
+        padding: 20, 
+        width: 600,
+        height: 180,
+        color:'white' }}>
                 <h1>Open Chain</h1>
                 <p>Selected account is {props.blockchain.account}</p>
                 <p>Selected account balance is {props.blockchain.balance} Eth
@@ -582,7 +532,12 @@ const Blockchain = (props) => {
 
 
             {/* Roles Management */}
-            <div className="section">
+            <div className="section"style={{backgroundColor:'#483434',
+        borderRadius : 25,
+        padding: 20, 
+        width: 600,
+        height: 380,
+        color:'white' }}>
                 <h1>Roles Managements</h1>
                 <div>
                     <form onSubmit={event => event.preventDefault()}>
@@ -628,7 +583,12 @@ const Blockchain = (props) => {
             </div>
 
             {/* Item Managemnet */}
-            <div className="section">
+            <div className="section" style={{backgroundColor:'#625151',
+        borderRadius : 25,
+        padding: 20, 
+        width: 600,
+        height: 350,
+        color:'white' }}>
                 <h1>Manufacture Item</h1>
                 <form onSubmit={manufactureItem}>
                     <label htmlFor="item_id">SKU </label>
@@ -650,8 +610,7 @@ const Blockchain = (props) => {
                         name="item_name"
                         value={formData.item_name}
                         onChange={handleInputChange}
-                        required
-                    />
+                        required/>
                     <br />
                     <label htmlFor="item_description">Description </label>
                     <input
@@ -679,7 +638,12 @@ const Blockchain = (props) => {
                     <p>{outputData.manufacture_item != null ? outputData.manufacture_item : ''}</p>
                 </form>
             </div>
-            <div className="section">
+            <div className="section"style={{backgroundColor:'#7c6e6e',
+        borderRadius : 25,
+        padding: 20, 
+        width: 600,
+        height: 180,
+        color:'white' }}>
                 <h1>Search Item</h1>
                 <form onSubmit={searchItem}>
                     <label>Item SKU </label>
@@ -779,7 +743,12 @@ const Blockchain = (props) => {
             </div>
 
             {/* Transactions */}
-            <div className="section">
+            <div className="section mb-5" id='ts'style={{backgroundColor:'#968b8b',
+        borderRadius : 25,
+        padding: 20, 
+        width: 600,
+        height: 150,
+        color:'white' }}>
                 <h1>Transactions</h1>
                 {props.blockchain.transactions.length == 0 && <p>No recent transactions to show.</p>}
                 <ul>
@@ -790,7 +759,59 @@ const Blockchain = (props) => {
                     ))}
                 </ul>
             </div>
+            <section class="stats">
+                <div class="container">
+                    <h3 class="stats-heading text-center my-1">
+                        Welcome to the best platform for safe and secure transactions.
+                    </h3>
+
+                    <div class="grid grid-3 text-center my-4">
+                        <div>
+                            <img src={bs} height="200" width="0.02"></img>
+                            <h3>5k+</h3>
+                            <p class="text-secondary">Satisfied businesses</p>
+                        </div>
+                        <div>
+                            <img src={truck} height='200'  ></img>
+                            {/* <i class="fas fa-upload fa-3x"></i> */}
+                            <h3>50k+</h3>
+                            <p class="text-secondary">Goods supplied</p>
+                        </div>
+                        <div>
+                            <img src={bss} height="200"></img>
+                            {/* <i class="fas fa-project-diagram fa-3x"></i> */}
+                            <h3>30k+</h3>
+                            <p class="text-secondary">Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer bg-dark my">
+                <div class="container grid grid-3">
+                    <div>
+                        <h1>LORD OF LUXURY.</h1>
+                        <p>Copyright &copy; 2023</p>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#lol">Home</a></li>
+                            <li><a href="#sg">Features</a></li>
+                            {/* <li><a href="docs.html">Docs</a></li> */}
+                            <li><a href="#lb">Our Partners</a></li>
+                            <li><a href="#ts">Transaction History</a></li>
+                            <li><a href="">Logged In As</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </footer>
         </div>
+        
     )
 }
 

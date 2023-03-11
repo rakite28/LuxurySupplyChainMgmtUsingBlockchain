@@ -10,7 +10,11 @@
   "sourceMap": "76:650:7:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "76:650:7:-:0;;;;;;;;",
   "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\nlibrary Roles {\r\n    struct Role {\r\n        mapping(address => bool) bearer;\r\n    }\r\n\r\n    function add(Role storage role, address account) internal {\r\n        require(account != address(0));\r\n        require(!has(role, account));\r\n\r\n        role.bearer[account] = true;\r\n    }\r\n\r\n    function remove(Role storage role, address account) internal {\r\n        require(account != address(0));\r\n        require(has(role, account));\r\n\r\n        role.bearer[account] = false;\r\n    }\r\n\r\n    function has(Role storage role, address account) internal view returns (bool) {\r\n        require(account != address(0));\r\n        return role.bearer[account];\r\n    }\r\n}\r\n",
+<<<<<<< HEAD
   "sourcePath": "C:\\Users\\Rachit\\Desktop\\405Found_LOC\\contracts\\roles\\Roles.sol",
+=======
+  "sourcePath": "C:\\Users\\harsh\\OneDrive\\Desktop\\405Found_LOC\\contracts\\roles\\Roles.sol",
+>>>>>>> 597eac6489dbb167e9a47047803aba6af59a376d
   "ast": {
     "absolutePath": "project:/contracts/roles/Roles.sol",
     "exportedSymbols": {
@@ -1304,7 +1308,11 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
+<<<<<<< HEAD
   "updatedAt": "2023-03-11T19:37:25.346Z",
+=======
+  "updatedAt": "2023-03-11T19:18:48.269Z",
+>>>>>>> 597eac6489dbb167e9a47047803aba6af59a376d
   "devdoc": {
     "kind": "dev",
     "methods": {},

@@ -1094,7 +1094,11 @@
   "sourceMap": "76:1001:1:-:0;;;218:111;;;;;;;;;;255:10;243:9;;:22;;;;;;;;;;;;;;;;;;311:9;;;;;;;;;;281:40;;307:1;281:40;;;;;;;;;;;;76:1001;;;;;;",
   "deployedSourceMap": "76:1001:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;814:143;;;:::i;:::-;;535:82;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;625:95;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;965:109;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;814:143;776:9;:7;:9::i;:::-;768:18;;;;;;913:1:::1;876:40;;894:9;::::0;::::1;;;;;;;;876:40;;;;;;;;;;;;947:1;927:9:::0;::::1;:22;;;;;;;;;;;;;;;;;;814:143::o:0;535:82::-;573:7;600:9;;;;;;;;;;;593:16;;535:82;:::o;625:95::-;665:4;703:9;;;;;;;;;;;689:23;;:10;:23;;;682:30;;625:95;:::o;965:109::-;776:9;:7;:9::i;:::-;768:18;;;;;;1038:28:::1;1057:8;1038:18;:28::i;:::-;965:109:::0;:::o;337:190::-;431:1;411:22;;:8;:22;;;;403:31;;;;;;479:8;450:38;;468:9;;;;;;;;;;450:38;;;;;;;;;;;;511:8;499:9;;:20;;;;;;;;;;;;;;;;;;337:190;:::o;7:126:8:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:118::-;328:24;346:5;328:24;:::i;:::-;323:3;316:37;241:118;;:::o;365:222::-;458:4;496:2;485:9;481:18;473:26;;509:71;577:1;566:9;562:17;553:6;509:71;:::i;:::-;365:222;;;;:::o;593:90::-;627:7;670:5;663:13;656:21;645:32;;593:90;;;:::o;689:109::-;770:21;785:5;770:21;:::i;:::-;765:3;758:34;689:109;;:::o;804:210::-;891:4;929:2;918:9;914:18;906:26;;942:65;1004:1;993:9;989:17;980:6;942:65;:::i;:::-;804:210;;;;:::o;1101:117::-;1210:1;1207;1200:12;1347:122;1420:24;1438:5;1420:24;:::i;:::-;1413:5;1410:35;1400:63;;1459:1;1456;1449:12;1400:63;1347:122;:::o;1475:139::-;1521:5;1559:6;1546:20;1537:29;;1575:33;1602:5;1575:33;:::i;:::-;1475:139;;;;:::o;1620:329::-;1679:6;1728:2;1716:9;1707:7;1703:23;1699:32;1696:119;;;1734:79;;:::i;:::-;1696:119;1854:1;1879:53;1924:7;1915:6;1904:9;1900:22;1879:53;:::i;:::-;1869:63;;1825:117;1620:329;;;;:::o",
   "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract Ownable {\r\n    address private origOwner;\r\n\r\n    event TransferOwnership(address indexed oldOwner, address indexed newOwner);\r\n\r\n    constructor() {\r\n        origOwner = msg.sender;\r\n        emit TransferOwnership(address(0), origOwner);\r\n    }\r\n\r\n    function _transferOwnership(address newOwner) internal {\r\n        require(newOwner != address(0));\r\n        emit TransferOwnership(origOwner, newOwner);\r\n        origOwner = newOwner;\r\n    }\r\n\r\n    function owner() public view returns (address) {\r\n        return origOwner;\r\n    }\r\n\r\n    function isOwner() public view returns (bool) {\r\n        return msg.sender == origOwner;\r\n    }\r\n\r\n    modifier onlyOwner() virtual {\r\n        require(isOwner());\r\n        _;\r\n    }\r\n\r\n    function renounceOwnership() public onlyOwner {\r\n        emit TransferOwnership(origOwner, address(0));\r\n        origOwner = address(0);\r\n    }\r\n\r\n    function transferOwnership(address newOwner) public onlyOwner {\r\n        _transferOwnership(newOwner);\r\n    }\r\n}\r\n",
+<<<<<<< HEAD
   "sourcePath": "C:\\Users\\Rachit\\Desktop\\405Found_LOC\\contracts\\Ownable.sol",
+=======
+  "sourcePath": "C:\\Users\\harsh\\OneDrive\\Desktop\\405Found_LOC\\contracts\\Ownable.sol",
+>>>>>>> 597eac6489dbb167e9a47047803aba6af59a376d
   "ast": {
     "absolutePath": "project:/contracts/Ownable.sol",
     "exportedSymbols": {
@@ -2457,7 +2461,11 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
+<<<<<<< HEAD
   "updatedAt": "2023-03-11T19:37:25.327Z",
+=======
+  "updatedAt": "2023-03-11T19:18:48.046Z",
+>>>>>>> 597eac6489dbb167e9a47047803aba6af59a376d
   "devdoc": {
     "kind": "dev",
     "methods": {},
