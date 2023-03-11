@@ -1859,7 +1859,7 @@
   "sourceMap": "101:1017:3:-:0;;;288:57;;;;;;;;;;313:24;326:10;313:12;;;:24;;:::i;:::-;101:1017;;353:129;412:22;426:7;412:9;:13;;;;;;:22;;;;:::i;:::-;452;466:7;452:22;;;;;;:::i;:::-;;;;;;;;353:129;:::o;167:186:7:-;263:1;244:21;;:7;:21;;;;236:30;;;;;;286:18;290:4;296:7;286:3;;;:18;;:::i;:::-;285:19;277:28;;;;;;341:4;318;:11;;:20;330:7;318:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;167:186;;:::o;558:165::-;630:4;674:1;655:21;;:7;:21;;;;647:30;;;;;;695:4;:11;;:20;707:7;695:20;;;;;;;;;;;;;;;;;;;;;;;;;688:27;;558:165;;;;:::o;7:126:8:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:118::-;328:24;346:5;328:24;:::i;:::-;323:3;316:37;241:118;;:::o;365:222::-;458:4;496:2;485:9;481:18;473:26;;509:71;577:1;566:9;562:17;553:6;509:71;:::i;:::-;365:222;;;;:::o;101:1017:3:-;;;;;;;",
   "deployedSourceMap": "101:1017:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;928:98;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;1034:81;;;:::i;:::-;;635:112;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;928:98;812:22;823:10;812;:22::i;:::-;790:110;;;;;;;;;;;;:::i;:::-;;;;;;;;;997:21:::1;1010:7;997:12;:21::i;:::-;928:98:::0;:::o;1034:81::-;1080:27;1096:10;1080:15;:27::i;:::-;1034:81::o;635:112::-;693:4;717:22;731:7;717:9;:13;;:22;;;;:::i;:::-;710:29;;635:112;;;:::o;167:186:7:-;263:1;244:21;;:7;:21;;;;236:30;;;;;;286:18;290:4;296:7;286:3;:18::i;:::-;285:19;277:28;;;;;;341:4;318;:11;;:20;330:7;318:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;167:186;;:::o;353:129:3:-;412:22;426:7;412:9;:13;;:22;;;;:::i;:::-;452;466:7;452:22;;;;;;:::i;:::-;;;;;;;;353:129;:::o;490:137::-;552:25;569:7;552:9;:16;;:25;;;;:::i;:::-;595:24;611:7;595:24;;;;;;:::i;:::-;;;;;;;;490:137;:::o;558:165:7:-;630:4;674:1;655:21;;:7;:21;;;;647:30;;;;;;695:4;:11;;:20;707:7;695:20;;;;;;;;;;;;;;;;;;;;;;;;;688:27;;558:165;;;;:::o;361:189::-;460:1;441:21;;:7;:21;;;;433:30;;;;;;482:18;486:4;492:7;482:3;:18::i;:::-;474:27;;;;;;537:5;514:4;:11;;:20;526:7;514:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;361:189;;:::o;88:117:8:-;197:1;194;187:12;334:126;371:7;411:42;404:5;400:54;389:65;;334:126;;;:::o;466:96::-;503:7;532:24;550:5;532:24;:::i;:::-;521:35;;466:96;;;:::o;568:122::-;641:24;659:5;641:24;:::i;:::-;634:5;631:35;621:63;;680:1;677;670:12;621:63;568:122;:::o;696:139::-;742:5;780:6;767:20;758:29;;796:33;823:5;796:33;:::i;:::-;696:139;;;;:::o;841:329::-;900:6;949:2;937:9;928:7;924:23;920:32;917:119;;;955:79;;:::i;:::-;917:119;1075:1;1100:53;1145:7;1136:6;1125:9;1121:22;1100:53;:::i;:::-;1090:63;;1046:117;841:329;;;;:::o;1176:90::-;1210:7;1253:5;1246:13;1239:21;1228:32;;1176:90;;;:::o;1272:109::-;1353:21;1368:5;1353:21;:::i;:::-;1348:3;1341:34;1272:109;;:::o;1387:210::-;1474:4;1512:2;1501:9;1497:18;1489:26;;1525:65;1587:1;1576:9;1572:17;1563:6;1525:65;:::i;:::-;1387:210;;;;:::o;1603:169::-;1687:11;1721:6;1716:3;1709:19;1761:4;1756:3;1752:14;1737:29;;1603:169;;;;:::o;1778:225::-;1918:34;1914:1;1906:6;1902:14;1895:58;1987:8;1982:2;1974:6;1970:15;1963:33;1778:225;:::o;2009:366::-;2151:3;2172:67;2236:2;2231:3;2172:67;:::i;:::-;2165:74;;2248:93;2337:3;2248:93;:::i;:::-;2366:2;2361:3;2357:12;2350:19;;2009:366;;;:::o;2381:419::-;2547:4;2585:2;2574:9;2570:18;2562:26;;2634:9;2628:4;2624:20;2620:1;2609:9;2605:17;2598:47;2662:131;2788:4;2662:131;:::i;:::-;2654:139;;2381:419;;;:::o;2806:118::-;2893:24;2911:5;2893:24;:::i;:::-;2888:3;2881:37;2806:118;;:::o;2930:222::-;3023:4;3061:2;3050:9;3046:18;3038:26;;3074:71;3142:1;3131:9;3127:17;3118:6;3074:71;:::i;:::-;2930:222;;;;:::o",
   "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\nimport \"./Roles.sol\";\r\n\r\ncontract Consumer {\r\n    using Roles for Roles.Role;\r\n\r\n    event ConsumerAdded(address account);\r\n    event ConsumerRemoved(address account);\r\n\r\n    Roles.Role private consumers;\r\n\r\n    constructor() {\r\n        _addConsumer(msg.sender);\r\n    }\r\n\r\n    function _addConsumer(address account) internal {\r\n        consumers.add(account);\r\n\r\n        emit ConsumerAdded(account);\r\n    }\r\n\r\n    function _removeConsumer(address account) internal {\r\n        consumers.remove(account);\r\n\r\n        emit ConsumerRemoved(account);\r\n    }\r\n\r\n    function isConsumer(address account) public view returns (bool) {\r\n        return consumers.has(account);\r\n    }\r\n\r\n    modifier onlyConsumer() {\r\n        require(\r\n            isConsumer(msg.sender),\r\n            \"Sender doesn't have the consumer role.\"\r\n        );\r\n        _;\r\n    }\r\n\r\n    function addConsumer(address account) public onlyConsumer {\r\n        _addConsumer(account);\r\n    }\r\n\r\n    function renounceConsumer() public {\r\n        _removeConsumer(msg.sender);\r\n    }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\Rachit\\Desktop\\Decentralized-Supply-Chain\\contracts\\roles\\Consumer.sol",
+  "sourcePath": "C:\\Users\\Rachit\\Desktop\\405Found_LOC\\contracts\\roles\\Consumer.sol",
   "ast": {
     "absolutePath": "project:/contracts/roles/Consumer.sol",
     "exportedSymbols": {
@@ -3089,6 +3089,12 @@
     "version": "0.8.10+commit.fc410830.Emscripten.clang"
   },
   "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf5aCa67Fce7588E35Db3306bDfa3691e7a5b7213",
+      "transactionHash": "0xfb7627f7c15ac9d59ae654b9de5943103d411cd8cdfb31ecc6d8e7b67f440e71"
+    },
     "1678519975832": {
       "events": {},
       "links": {},
@@ -3142,10 +3148,106 @@
       "links": {},
       "address": "0xc45065a399837C592AFC056aB888Dd5e077fe91D",
       "transactionHash": "0x85638fd6949e6066627a71f79012e8bea46853a8389dd749269c7d51c756d38b"
+    },
+    "1678554260564": {
+      "events": {},
+      "links": {},
+      "address": "0xc45065a399837C592AFC056aB888Dd5e077fe91D",
+      "transactionHash": "0x85638fd6949e6066627a71f79012e8bea46853a8389dd749269c7d51c756d38b"
+    },
+    "1678556325778": {
+      "events": {},
+      "links": {},
+      "address": "0xc45065a399837C592AFC056aB888Dd5e077fe91D",
+      "transactionHash": "0x85638fd6949e6066627a71f79012e8bea46853a8389dd749269c7d51c756d38b"
+    },
+    "1678557940949": {
+      "events": {},
+      "links": {},
+      "address": "0xc45065a399837C592AFC056aB888Dd5e077fe91D",
+      "transactionHash": "0x85638fd6949e6066627a71f79012e8bea46853a8389dd749269c7d51c756d38b"
+    },
+    "1678560068052": {
+      "events": {
+        "0x28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee07142": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerAdded",
+          "type": "event"
+        },
+        "0xe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f098": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xb05807419b04B4fb8aA9a1F5906fFa636555615a",
+      "transactionHash": "0x6ac114c788c745d35a8908d4b28b996af61f336a6d994ddaf6977d43fb84ae96"
+    },
+    "1678560674789": {
+      "events": {
+        "0x28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee07142": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerAdded",
+          "type": "event"
+        },
+        "0xe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f098": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xfdC0D11d30bF69625491074d09c0d8A2243aA38f",
+      "transactionHash": "0x87425b1d10f9ba51ac05f2134b57f82fe79bc3bcea09da13ed0fafb4aafefe37"
+    },
+    "1678561583438": {
+      "events": {},
+      "links": {},
+      "address": "0xc45065a399837C592AFC056aB888Dd5e077fe91D",
+      "transactionHash": "0x85638fd6949e6066627a71f79012e8bea46853a8389dd749269c7d51c756d38b"
+    },
+    "1678563223117": {
+      "events": {},
+      "links": {},
+      "address": "0xc45065a399837C592AFC056aB888Dd5e077fe91D",
+      "transactionHash": "0x85638fd6949e6066627a71f79012e8bea46853a8389dd749269c7d51c756d38b"
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-03-11T15:45:01.109Z",
+  "updatedAt": "2023-03-11T19:37:27.913Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
