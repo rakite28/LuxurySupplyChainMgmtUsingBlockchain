@@ -1389,11 +1389,7 @@
   "sourceMap": "101:1096:4:-:0;;;316:60;;;;;;;;;;341:27;357:10;341:15;;;:27;;:::i;:::-;101:1096;;384:138;446:25;463:7;446:12;:16;;;;;;:25;;;;:::i;:::-;506:7;489:25;;;;;;;;;;;;384:138;:::o;167:186:7:-;263:1;244:21;;:7;:21;;;;236:30;;;;;;286:18;290:4;296:7;286:3;;;:18;;:::i;:::-;285:19;277:28;;;;;;341:4;318;:11;;:20;330:7;318:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;167:186;;:::o;558:165::-;630:4;674:1;655:21;;:7;:21;;;;647:30;;;;;;695:4;:11;;:20;707:7;695:20;;;;;;;;;;;;;;;;;;;;;;;;;688:27;;558:165;;;;:::o;101:1096:4:-;;;;;;;",
   "deployedSourceMap": "101:1096:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1107:87;;;:::i;:::-;;992:107;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;684:118;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1107:87;1156:30;1175:10;1156:18;:30::i;:::-;1107:87::o;992:107::-;870:25;884:10;870:13;:25::i;:::-;848:116;;;;;;;;;;;;:::i;:::-;;;;;;;;;1067:24:::1;1083:7;1067:15;:24::i;:::-;992:107:::0;:::o;684:118::-;745:4;769:25;786:7;769:12;:16;;:25;;;;:::i;:::-;762:32;;684:118;;;:::o;167:186:7:-;263:1;244:21;;:7;:21;;;;236:30;;;;;;286:18;290:4;296:7;286:3;:18::i;:::-;285:19;277:28;;;;;;341:4;318;:11;;:20;330:7;318:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;167:186;;:::o;530:146:4:-;595:28;615:7;595:12;:19;;:28;;;;:::i;:::-;660:7;641:27;;;;;;;;;;;;530:146;:::o;384:138::-;446:25;463:7;446:12;:16;;:25;;;;:::i;:::-;506:7;489:25;;;;;;;;;;;;384:138;:::o;558:165:7:-;630:4;674:1;655:21;;:7;:21;;;;647:30;;;;;;695:4;:11;;:20;707:7;695:20;;;;;;;;;;;;;;;;;;;;;;;;;688:27;;558:165;;;;:::o;361:189::-;460:1;441:21;;:7;:21;;;;433:30;;;;;;482:18;486:4;492:7;482:3;:18::i;:::-;474:27;;;;;;537:5;514:4;:11;;:20;526:7;514:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;361:189;;:::o;88:117:8:-;197:1;194;187:12;334:126;371:7;411:42;404:5;400:54;389:65;;334:126;;;:::o;466:96::-;503:7;532:24;550:5;532:24;:::i;:::-;521:35;;466:96;;;:::o;568:122::-;641:24;659:5;641:24;:::i;:::-;634:5;631:35;621:63;;680:1;677;670:12;621:63;568:122;:::o;696:139::-;742:5;780:6;767:20;758:29;;796:33;823:5;796:33;:::i;:::-;696:139;;;;:::o;841:329::-;900:6;949:2;937:9;928:7;924:23;920:32;917:119;;;955:79;;:::i;:::-;917:119;1075:1;1100:53;1145:7;1136:6;1125:9;1121:22;1100:53;:::i;:::-;1090:63;;1046:117;841:329;;;;:::o;1176:90::-;1210:7;1253:5;1246:13;1239:21;1228:32;;1176:90;;;:::o;1272:109::-;1353:21;1368:5;1353:21;:::i;:::-;1348:3;1341:34;1272:109;;:::o;1387:210::-;1474:4;1512:2;1501:9;1497:18;1489:26;;1525:65;1587:1;1576:9;1572:17;1563:6;1525:65;:::i;:::-;1387:210;;;;:::o;1603:169::-;1687:11;1721:6;1716:3;1709:19;1761:4;1756:3;1752:14;1737:29;;1603:169;;;;:::o;1778:228::-;1918:34;1914:1;1906:6;1902:14;1895:58;1987:11;1982:2;1974:6;1970:15;1963:36;1778:228;:::o;2012:366::-;2154:3;2175:67;2239:2;2234:3;2175:67;:::i;:::-;2168:74;;2251:93;2340:3;2251:93;:::i;:::-;2369:2;2364:3;2360:12;2353:19;;2012:366;;;:::o;2384:419::-;2550:4;2588:2;2577:9;2573:18;2565:26;;2637:9;2631:4;2627:20;2623:1;2612:9;2608:17;2601:47;2665:131;2791:4;2665:131;:::i;:::-;2657:139;;2384:419;;;:::o",
   "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\nimport \"./Roles.sol\";\r\n\r\ncontract Distributor {\r\n    using Roles for Roles.Role;\r\n\r\n    event DistributorAdded(address indexed account);\r\n    event DistributorRemoved(address indexed account);\r\n\r\n    Roles.Role private distributors;\r\n\r\n    constructor() {\r\n        _addDistributor(msg.sender);\r\n    }\r\n\r\n    function _addDistributor(address account) internal {\r\n        distributors.add(account);\r\n\r\n        emit DistributorAdded(account);\r\n    }\r\n\r\n    function _removeDistributor(address account) internal {\r\n        distributors.remove(account);\r\n\r\n        emit DistributorRemoved(account);\r\n    }\r\n\r\n    function isDistributor(address account) public view returns (bool) {\r\n        return distributors.has(account);\r\n    }\r\n\r\n    modifier onlyDistributor() {\r\n        require(\r\n            isDistributor(msg.sender),\r\n            \"Sender doesn't have the distributor role.\"\r\n        );\r\n        _;\r\n    }\r\n\r\n    function addDistributor(address account) public onlyDistributor {\r\n        _addDistributor(account);\r\n    }\r\n\r\n    function renounceDistributor() public {\r\n        _removeDistributor(msg.sender);\r\n    }\r\n}\r\n",
-<<<<<<< HEAD
-  "sourcePath": "C:\\Users\\Rachit\\Desktop\\405Found_LOC\\contracts\\roles\\Distributor.sol",
-=======
-  "sourcePath": "C:\\Users\\harsh\\OneDrive\\Desktop\\405Found_LOC\\contracts\\roles\\Distributor.sol",
->>>>>>> 597eac6489dbb167e9a47047803aba6af59a376d
+  "sourcePath": "C:\\Users\\Rachit\\Desktop\\Decentralized-Supply-Chain\\contracts\\roles\\Distributor.sol",
   "ast": {
     "absolutePath": "project:/contracts/roles/Distributor.sol",
     "exportedSymbols": {
@@ -2623,12 +2619,6 @@
     "version": "0.8.10+commit.fc410830.Emscripten.clang"
   },
   "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0x83a4F63C2bD875b644E9282e7f105829c76FeFFC",
-      "transactionHash": "0x09c669af120f95a2895e03678406f93bf0f629dd7890e89c80ebed849d697504"
-    },
     "1678519975832": {
       "events": {},
       "links": {},
@@ -2682,124 +2672,10 @@
       "links": {},
       "address": "0x5c71dA40B4510d7521693f67e44122e30585B91f",
       "transactionHash": "0x129640ebabec6b79f7a86e4ec7a2aad0609b511d2bf5c5d51af9ec053a132da6"
-    },
-<<<<<<< HEAD
-    "1678554260564": {
-      "events": {},
-      "links": {},
-      "address": "0x5c71dA40B4510d7521693f67e44122e30585B91f",
-      "transactionHash": "0x129640ebabec6b79f7a86e4ec7a2aad0609b511d2bf5c5d51af9ec053a132da6"
-    },
-    "1678556325778": {
-      "events": {},
-      "links": {},
-      "address": "0x5c71dA40B4510d7521693f67e44122e30585B91f",
-      "transactionHash": "0x129640ebabec6b79f7a86e4ec7a2aad0609b511d2bf5c5d51af9ec053a132da6"
-    },
-    "1678557940949": {
-      "events": {},
-      "links": {},
-      "address": "0x5c71dA40B4510d7521693f67e44122e30585B91f",
-      "transactionHash": "0x129640ebabec6b79f7a86e4ec7a2aad0609b511d2bf5c5d51af9ec053a132da6"
-    },
-    "1678560068052": {
-      "events": {
-        "0xddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea8": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "DistributorAdded",
-          "type": "event"
-        },
-        "0x126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d59": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "DistributorRemoved",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xbC02E8A37710E006321BEd0bE28DA5b24b81d99E",
-      "transactionHash": "0x8847ae1cd53a7778dc1685e1ba99752ec031f66a2f28b0175a9c7254de505c07"
-    },
-    "1678560674789": {
-      "events": {
-        "0xddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea8": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "DistributorAdded",
-          "type": "event"
-        },
-        "0x126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d59": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "DistributorRemoved",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xCa43527600f77c46801bB7A273dB13e423E6c500",
-      "transactionHash": "0xe2ac3ded8f5fcc170e48015ad6a62f6f022c60feea4cff70987c5270e9423a48"
-    },
-    "1678561583438": {
-      "events": {},
-      "links": {},
-      "address": "0x5c71dA40B4510d7521693f67e44122e30585B91f",
-      "transactionHash": "0x129640ebabec6b79f7a86e4ec7a2aad0609b511d2bf5c5d51af9ec053a132da6"
-    },
-    "1678563223117": {
-      "events": {},
-      "links": {},
-      "address": "0x5c71dA40B4510d7521693f67e44122e30585B91f",
-      "transactionHash": "0x129640ebabec6b79f7a86e4ec7a2aad0609b511d2bf5c5d51af9ec053a132da6"
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-03-11T19:37:27.908Z",
-=======
-    "1678554859287": {
-      "events": {},
-      "links": {},
-      "address": "0x3414BDEbe70D688BaA40c3fc76bc2Ca3188F695e",
-      "transactionHash": "0x4aa6e69f1c4556974f675dcfaa8e17d2856570d623f06b4de578c1641d4ea2a0"
-    },
-    "1678562288858": {
-      "events": {},
-      "links": {},
-      "address": "0x3414BDEbe70D688BaA40c3fc76bc2Ca3188F695e",
-      "transactionHash": "0x4aa6e69f1c4556974f675dcfaa8e17d2856570d623f06b4de578c1641d4ea2a0"
-    }
-  },
-  "schemaVersion": "3.4.13",
-  "updatedAt": "2023-03-11T19:19:12.470Z",
->>>>>>> 597eac6489dbb167e9a47047803aba6af59a376d
+  "updatedAt": "2023-03-11T15:45:01.104Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

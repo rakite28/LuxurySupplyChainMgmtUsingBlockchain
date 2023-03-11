@@ -85,6 +85,7 @@ const Blockchain = (props) => {
             })
         }
 
+        
         loadBlockchain()
         syncAccountChange()
 
