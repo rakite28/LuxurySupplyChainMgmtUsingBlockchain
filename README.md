@@ -14,8 +14,8 @@ Frontend is built using React JS, Redux and Tailwind CSS.
 ## Backend
 1. Install packages: ```npm install```
 2. Install truffle: ```npm install -g truffle```
-3. Start local blockchain: ```truffle develop```. This shows ten accounts (and their private keys) that can be used when interacting with the blockchain.
-4. Compile and migrate smart contracts on the local blockahin by running: ```migrate``` in the truffle develop prompt.
+3. Start local blockchain on ganache. 
+4. Link local blockchain: ```truffle migrate --reset```. 
 
 ## Frontend
 1. Change into app/src directory: ```cd app/src```
